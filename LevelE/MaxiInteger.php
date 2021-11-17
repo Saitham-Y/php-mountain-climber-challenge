@@ -45,7 +45,7 @@ class MaxiInteger
      */
     private function realSum($a, $b)
     {
-        /** @TODO */
+        return new MaxiInteger (((double)$a->value + (double)$b->value));
     }
 
     private function setValue($value)
