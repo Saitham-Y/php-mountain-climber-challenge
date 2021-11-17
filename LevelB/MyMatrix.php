@@ -83,8 +83,19 @@ class MyMatrix
      */
     public function fillZero()
     {
-        /** @TODO */
-
+        
+        $cpmatrix = $this->matrix;
+        for ($i = 0; $i < $this->iMax; $i++ ){
+            for ($j = 0; $j < $this->jMax; $j++ )
+                if ($this->matrix[$i][$j] == 0){
+                    for ($k = 0; $k < $this->jMax; $k++ )
+                        $cpmatrix[$i][$k] = 0;
+                    for ($k = 0; $k < $this->iMax; $k++ )
+                        $cpmatrix[$k][$j] = 0;
+                    
+                }
+        }
+        $this->matrix = $cpmatrix;
         return $this;
     }
 }

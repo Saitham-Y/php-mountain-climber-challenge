@@ -1,6 +1,8 @@
-<?php
+<?php 
 
 namespace Hackathon\LevelA;
+
+header('Content-type: text/html; charset=utf-8');
 
 class Palindrome
 {
@@ -20,9 +22,10 @@ class Palindrome
      */
     public function generatePalindrome()
     {
-        /** @TODO */
+        $str = $this->str;
+        $str2 = $str;
 
-        return 'abccba';
+        return $str2 . strrev($str2);
     }
 
 }
