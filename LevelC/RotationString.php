@@ -14,7 +14,7 @@ class RotationString
      */
     public static function isRotation($s1, $s2)
     {
-        /** @TODO */
+        
 
         return false;
     }
