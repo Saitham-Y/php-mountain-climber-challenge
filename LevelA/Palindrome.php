@@ -2,8 +2,6 @@
 
 namespace Hackathon\LevelA;
 
-header('Content-type: text/html; charset=utf-8');
-
 class Palindrome
 {
     private $str;
@@ -11,6 +9,12 @@ class Palindrome
     public function __construct($str)
     {
         $this->str = $str;
+    }
+    public function mb_strrev($text)
+    {
+        return join('', array_reverse(
+            preg_split('~~u', $text, -1, PREG_SPLIT_NO_EMPTY)
+        ));
     }
 
     /**
@@ -25,7 +29,8 @@ class Palindrome
         $str = $this->str;
         $str2 = $str;
 
-        return $str2 . strrev($str2);
+        return $str2 . $this->mb_strrev($str2);
     }
 
+    
 }
